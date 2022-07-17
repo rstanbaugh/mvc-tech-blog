@@ -4,33 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>TechTalk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">    
 </head>
+
+<body is-primary>
+  <header class="hero is-dark ">
+    <nav class="navbar is-primary is-fixed-top mt-2 ">
+        <div class="navbar-menu">
+            <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
+
+        </div>
+        <div class="navbar-end">
+          <a href="/login" class="button is-primary">Sign Up!</a>          
+          <a href="/login" class="button is-light">Login</a>          
+        </div>
+
+    </nav>
+    <h1 class="app-title mt-2"><i class="fa-solid fa-power-off"></i> TechTalk!</h1>
+    <p>The Tech Blog!</p>
+  </header>
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+    
     <main>
-      {{{ body }}}
+            {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
+
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            <p>
+            <a href="/">homepage</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">dashboard</a> | 
+            <a href="/dashboard/create/">create new post</a>
+            {{else}}
+             | <a href="/login/">login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+    <p>
+      <strong>technically speaking</strong> by <a href="https://github.com/jpd61">Joseph DeWoody</a> | made with <a href="https://bulma.io/">bulma</a> | source code:
+      <a href="https://github.com/jpd61/mvc-tech-blog"><i class="fab fa-github"></i></a> |  
+       <a href="mailto:jpd@dewoodyoil.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
+        <img alt="Twitter: jpdewoody" class="mt-3" src="https://img.shields.io/twitter/follow/jpdewoody.svg?style=social" target="_blank" />
+    </p>
+  </div>
     </footer>
   </div>
-  
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
