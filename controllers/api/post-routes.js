@@ -36,6 +36,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get single user
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
