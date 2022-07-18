@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
+    console.log ("========== home-routes '/' ==========")
     console.log(req.session);
     
     Post.findAll({
@@ -28,6 +29,8 @@ router.get('/', (req, res) => {
       ]
     })
       .then(dbPostData => {
+        console.log('----- dbPostData -----')
+        console.log(dbPostData);
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('homepage', {
             posts,
@@ -57,6 +60,18 @@ router.get('/login', (req, res) => {
   
     res.render('signup');
   });
+
+  // allow user to log out if signed in
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+      req.session.destroy(() => {
+          res.status(204).end();
+      });
+  }
+  else {
+      res.status(404).end();
+  }
+});
 
   router.get('/post/:id', (req, res) => {
     Post.findOne({

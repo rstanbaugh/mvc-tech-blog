@@ -4,33 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>TechTalk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"> --}}
+    <link rel="stylesheet" href="/stylesheets/style.css">    
 </head>
 
 <body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">Homepage</a>
+            {{#if loggedIn}}
+              <a href="/dashboard" class="navbar-item ">dashboard</a>
+              <a href="/dashboard/create/" class="navbar-item ">create post</a>
+            {{/if}}
+        </div>
+
+        <div class="navbar-end">
+          {{#if loggedIn}}
+            <a href="/signup" is="login" class="navbar-item">Sign Up!</a>          
+            <a href="/logout" id="logout" class="navbar-item">Logout</a>
+          {{else}}
+            <a href="/login" class="navbar-item">Login</a>
+
+          {{/if}}
+        </div>
+    </nav>
+    <h1 class="app-title"><i class="fa-solid fa-power-off"></i> TechTalk!</h1>
+    <p>The Tech Blog!</p>
+  </header>
+
   <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+    
     <main>
-      {{{ body }}}
+            {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
+
+    <footer class="footer">
+        <div class="">
+            <p>
+            <a href="/">homepage</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">dashboard</a> | 
+            <a href="/dashboard/create/">create new post</a>
+            {{else}}
+             | <a href="/login/">login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+    <p>
+      <strong>TechTalk!</strong> by <a href="https://github.com/rstanbaugh">Rich Stanbaugh</a> | source code:
+      <a href="https://github.com/rstanbaugh/mvc-tech-blog/"><i class="fab fa-github"></i></a> |  
+       <a href="mailto:rstanbaugh@gmail.com.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
+    </p>
+  </div>
     </footer>
   </div>
-  
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}

@@ -1,33 +1,33 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<!-- Jumbotron -->
+{{!-- {{> jumbotron}} --}}
+<!-- Jumbotron -->
+<div class="login">
+  <form class="login-form">
+    <div class="login">
+      <h4 class="">Sign In</h4>
+      <label for="email-login">Email</label>
+      <input type="text" class="form-text email-login" id="email-login" required/>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
 
+      <label for="password-login">Password</label>
+      <input type="password" class="form-text password-login" id="password-login">
+      <button type="submit" class="login-form-button">Sign In</button>
+    </div>
+  </form>
+
+  <form class="signup-form">
+    <h4 class="">Sign Up!</h4>
+
+    <label for="username-signup">Username</label>
+    <input type="text" class="form-text username-signup" id="username-signup">
+
+    <label for="password-login">Email</label>
+    <input type="email" class="form-text email-signup" id="email-signup">
+
+    <label for="password-signup">Password</label>
+    <input type="password" class="form-text password-signup" id="password-signup">
+
+    <button type="submit" class="signup-form-button">Sign Up!</button>
+  </form>
+</div>
 <script src="/javascript/login.js"></script>
