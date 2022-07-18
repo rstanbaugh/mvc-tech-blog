@@ -6,36 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechTalk</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"> --}}
     <link rel="stylesheet" href="/stylesheets/style.css">    
 </head>
 
-<body is-primary>
-  <header class="hero is-dark ">
-    <nav class="navbar is-primary is-fixed-top mt-2 ">
-        <div class="navbar-menu">
-            <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
-
+<body>
+  <header class="hero">
+    <nav class="navbar">
+        <div class="navbar-start">
+            <a href="/" class="navbar-item">Homepage</a>
         </div>
+
         <div class="navbar-end">
-          <a href="/login" class="button is-primary">Sign Up!</a>          
-          <a href="/login" class="button is-light">Login</a>          
+          <a href="/login" class="navbar-item">Sign Up!</a>          
+          <a href="/login" class="navbar-item">Login</a>          
         </div>
-
     </nav>
-    <h1 class="app-title mt-2"><i class="fa-solid fa-power-off"></i> TechTalk!</h1>
+    <h1 class="app-title"><i class="fa-solid fa-power-off"></i> TechTalk!</h1>
     <p>The Tech Blog!</p>
   </header>
 
-<body>
   <div class="wrapper">
     
     <main>
             {{{ body }}}
     </main>
 
-    <footer class="footer rows pb-2">
-        <div class="row-is-full content has-text-centered">
+    <footer class="footer">
+        <div class="">
             <p>
             <a href="/">homepage</a>{{#if loggedIn}} | 
             <a href="/dashboard/">dashboard</a> | 
