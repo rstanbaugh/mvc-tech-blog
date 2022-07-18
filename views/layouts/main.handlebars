@@ -15,11 +15,20 @@
     <nav class="navbar">
         <div class="navbar-start">
             <a href="/" class="navbar-item">Homepage</a>
+            {{#if loggedIn}}
+              <a href="/dashboard" class="navbar-item ">dashboard</a>
+              <a href="/dashboard/create/" class="navbar-item ">create post</a>
+            {{/if}}
         </div>
 
         <div class="navbar-end">
-          <a href="/login" class="navbar-item">Sign Up!</a>          
-          <a href="/login" class="navbar-item">Login</a>          
+          {{#if loggedIn}}
+            <a href="/signup" is="login" class="navbar-item">Sign Up!</a>          
+            <a href="/logout" id="logout" class="navbar-item">Logout</a>
+          {{else}}
+            <a href="/login" class="navbar-item">Login</a>
+
+          {{/if}}
         </div>
     </nav>
     <h1 class="app-title"><i class="fa-solid fa-power-off"></i> TechTalk!</h1>
@@ -45,10 +54,9 @@
         </div>
       <div class="row-is-full content has-text-centered">
     <p>
-      <strong>technically speaking</strong> by <a href="https://github.com/jpd61">Joseph DeWoody</a> | made with <a href="https://bulma.io/">bulma</a> | source code:
-      <a href="https://github.com/jpd61/mvc-tech-blog"><i class="fab fa-github"></i></a> |  
-       <a href="mailto:jpd@dewoodyoil.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
-        <img alt="Twitter: jpdewoody" class="mt-3" src="https://img.shields.io/twitter/follow/jpdewoody.svg?style=social" target="_blank" />
+      <strong>TechTalk!</strong> by <a href="https://github.com/rstanbaugh">Rich Stanbaugh</a> | source code:
+      <a href="https://github.com/rstanbaugh/mvc-tech-blog/"><i class="fab fa-github"></i></a> |  
+       <a href="mailto:rstanbaugh@gmail.com.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
     </p>
   </div>
     </footer>
