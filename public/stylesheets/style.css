@@ -183,7 +183,7 @@ p {
 .list-item {
   margin-bottom: 10px;
   padding: 1.5%;
-  border-radius: var(--border-radius);
+  /* border-radius: var(--border-radius); */
   background-color: var(--light-dark);
   color: var(--primary);
   text-decoration: none;
@@ -213,17 +213,57 @@ p {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  list-style-type: none;
+
 }
 
 .card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   color: var(--primary);
-  background-color: var(--dark);
+  font-size: larger;
   padding: 2.5%;
   border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  background-color: var(--dark);
 }
 
+.card-header:hover{
+  background-color: var(--light-dark);
+  text-decoration-line: underline;
+}
+
+.card-header a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.card-header p {
+  font-size: small;
+}
 .card-body {
   padding: 2.5%;
+}
+
+/* comment form */
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #7d7d7d;
 }
 
 /* FORM */
