@@ -43,7 +43,6 @@
   background-color: var(--primary);
   padding: .25em;
   margin-right: .5em;
-  /* border: solid var(--primary); */
   border-radius: var(--border-radius);
   box-shadow: 3px 3px var(--light-dark);
 }
@@ -53,7 +52,6 @@
   color: var(--primary);
   border: solid var(--primary);
   border: solid var(--light-dark);
-
 }
 
 .login, .login-form, .signup-form{
@@ -75,6 +73,17 @@
   border-radius: var(--border-radius);
   box-shadow: 3px 3px var(--light-dark);
 }
+
+
+.login-form-button:hover { 
+  background-color: var(--light-dark);
+  color: var(--primary);
+  border: solid var(--primary);
+  border: solid var(--light-dark);
+}
+
+
+
 
 .form-text {
   padding: .225em;
@@ -245,7 +254,20 @@ p {
   padding: 2.5%;
 }
 
-/* comment form */
+/* comments */
+.comment {
+  margin-bottom: 10px;
+  padding: 1.5%;
+  /* border-radius: var(--border-radius); */
+  background-color: var(--light-dark);
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.comment:hover {
+  background-color: var(--dark);
+}
+
 .comment-form {
   margin-bottom: 5%;
 }
@@ -287,6 +309,14 @@ p {
   border-radius: var(--border-radius);
 }
 
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+
 /* HEIGHT / WIDTH UTILS */
 .min-100-vh {
   min-height: 100vh;
@@ -301,7 +331,48 @@ p {
   text-transform: uppercase;
 }
 
+/* PADDING */
+.p-0 {
+  padding: 0;
+}
 
+.p-1{
+  padding: .25em;
+}
+
+.p-2{
+  padding: .5em;
+}
+
+.p-3 {
+  padding: .75em;
+}
+
+.p-4 {
+  padding: 1em;
+}
+
+
+/* MARGIN CONTENT */
+.m-0 {
+  margin: 0ch;
+}
+
+.m-1 {
+  margin: .25em;
+}
+
+.m-2{
+  margin: .5em;
+}
+
+.m-3{
+  margin: .75em;
+}
+
+.m-4{
+  margin: 1em;
+}
 /* FLEX CONTENT */
 .flex-row {
   display: flex;
