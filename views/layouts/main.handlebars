@@ -10,23 +10,23 @@
     <link rel="stylesheet" href="/stylesheets/style.css">    
 </head>
 
-<body>
+<body class="card-body">
   <header class="hero">
     <nav class="navbar">
         <div class="navbar-start">
-            <a href="/" class="navbar-item">Homepage</a>
+            <a href="/" class="navbar-item">homepage</a>
             {{#if loggedIn}}
               <a href="/dashboard" class="navbar-item ">dashboard</a>
-              {{!-- <a href="/dashboard/create/" class="navbar-item ">create post</a> --}}
+              <a href="/dashboard/create/" class="navbar-item ">create post</a>
             {{/if}}
         </div>
 
         <div class="navbar-end">
           {{#if loggedIn}}
-            <a href="/logout" id="logout" class="navbar-item">Logout</a>
+            <a href="/logout" id="logout" class="navbar-item">logout</a>
           {{else}}
-            <a href="/signup" is="login" class="navbar-item">Sign Up!</a>          
-            <a href="/login" class="navbar-item" id="login-button">Login</a>
+            <a href="/signup" is="login" class="navbar-item">sign up!</a>          
+            <a href="/login" class="navbar-item" id="login-button">login</a>
           {{/if}}
         </div>
     </nav>

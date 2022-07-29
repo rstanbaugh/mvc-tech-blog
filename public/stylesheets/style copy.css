@@ -180,6 +180,7 @@ p {
 .form-input,
 .form-textarea {
   display: block;
+  width: 50%;
 }
 
 .form-label {
@@ -194,6 +195,10 @@ p {
   font-size: 1.2rem;
   border: 2px solid var(--light-dark);
   border-radius: var(--border-radius);
+}
+
+.text-body{
+  width: 50%;
 }
 
 /* HEIGHT / WIDTH UTILS */

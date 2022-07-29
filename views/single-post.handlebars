@@ -1,15 +1,17 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
+<div class="form-container">
+  <form>
+    <div>
+      <textarea class="comment-text" name="comment-body"></textarea>
+    </div>
+    <div>
+      {{!-- <button type="submit">add comment</button> --}}
+      <a href="javascript:{}" id="comment-button" onclick="commentFormHandler()" class="login-form-button m-2">add comment</a>
+    </div>
+  </form>
+</div>
 {{/if}}
 
 {{> comments post.comments}}
