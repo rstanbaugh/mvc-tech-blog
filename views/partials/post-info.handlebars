@@ -1,8 +1,12 @@
 {{!-- <article class="post"> --}}
 <article class="">
   <header class="card-header">
-        <a href="/post/{{id}}" target="_blank">{{title}}</a>
-        <p>Posted by {{user.username}} on {{format_date created_at}}</p>
+    <div class="post-titlebar">
+      <a href="/post/{{id}}" target="_blank">{{title}}</a>
+      <p>Posted by {{user.username}} on {{format_date created_at}}</p>
+    </div>
+    <a href="/dashboard/edit/{{id}}" id="post-edit-btn">edit</a>
+
   </header>
   <body class="card-body">
     <p class="m-3">{{post_content}}</p>

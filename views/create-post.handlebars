@@ -2,13 +2,13 @@
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
+    <div class="form-elements">
       <label for="post-title">title</label>
-      <input type="text" id="post-title" name="post-title" />
+      <input type="text" id="post-title" name="post-title" class="form-title" placeholder="insert blog title here"/>
     </div>
-    <div>
+    <div class="form-elements">
       <label for="post-content">content</label>
-      <input id="post-content" name="post-content" class="post-content"/>
+      <textarea rows="10" wrap="soft" id="post-content" name="post-content" class="post-content" placeholder="insert blog content here"></textarea>
     </div>
     <div>
       {{!-- <button type="submit" class="btn">create</button> --}}
