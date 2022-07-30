@@ -18,6 +18,7 @@ const sess = {
   cookie: {
         // Session will automatically expire in 10 minutes
         expires: 10 * 60 * 1000
+        // expires: 1 * 5 * 1000
   },
   resave: true,
   rolling: true,

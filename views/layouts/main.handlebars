@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/stylesheets/style.css">    
 </head>
 
-<body>
+<body class="card-body">
   <header class="hero">
     <nav class="navbar">
         <div class="navbar-start">
-            <a href="/" class="navbar-item">Homepage</a>
+            <a href="/" class="navbar-item">homepage</a>
             {{#if loggedIn}}
               <a href="/dashboard" class="navbar-item ">dashboard</a>
               <a href="/dashboard/create/" class="navbar-item ">create post</a>
@@ -23,11 +23,10 @@
 
         <div class="navbar-end">
           {{#if loggedIn}}
-            <a href="/signup" is="login" class="navbar-item">Sign Up!</a>          
-            <a href="/logout" id="logout" class="navbar-item">Logout</a>
+            <a href="/logout" id="logout" class="navbar-item">logout</a>
           {{else}}
-            <a href="/login" class="navbar-item">Login</a>
-
+            <a href="/signup" is="login" class="navbar-item">sign up!</a>          
+            <a href="/login" class="navbar-item" id="login-button">login</a>
           {{/if}}
         </div>
     </nav>
@@ -37,28 +36,27 @@
 
   <div class="wrapper">
     
-    <main>
+    <main class="main">
             {{{ body }}}
     </main>
 
     <footer class="footer">
-        <div class="">
-            <p>
-            <a href="/">homepage</a>{{#if loggedIn}} | 
-            <a href="/dashboard/">dashboard</a> | 
-            <a href="/dashboard/create/">create new post</a>
-            {{else}}
-             | <a href="/login/">login</a>
-            {{/if}}
-            </p>
-        </div>
+      <div class="">
+        <a href="/">homepage</a>
+        {{#if loggedIn}} 
+        <a href="/dashboard/"> |dashboard</a> | 
+        <a href="/dashboard/create/">create new post</a>
+        {{else}} 
+          |<a href="/login/" id="footerLogin"> login</a>
+        {{/if}}
+      </div>      
       <div class="row-is-full content has-text-centered">
-    <p>
-      <strong>TechTalk!</strong> by <a href="https://github.com/rstanbaugh">Rich Stanbaugh</a> | source code:
-      <a href="https://github.com/rstanbaugh/mvc-tech-blog/"><i class="fab fa-github"></i></a> |  
-       <a href="mailto:rstanbaugh@gmail.com.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
-    </p>
-  </div>
+        <p>
+          <strong>TechTalk!</strong> by <a href="https://github.com/rstanbaugh">Rich Stanbaugh</a> | source code:
+          <a href="https://github.com/rstanbaugh/mvc-tech-blog/"><i class="fab fa-github"></i></a> |  
+          <a href="mailto:rstanbaugh@gmail.com.com"><i class="far fa-envelope"></i></a> | <a href="https://twitter.com/jpdewoody">
+        </p>
+      </div>
     </footer>
   </div>
 

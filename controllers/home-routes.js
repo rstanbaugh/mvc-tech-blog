@@ -63,6 +63,7 @@ router.get('/login', (req, res) => {
 
   // allow user to log out if signed in
 router.post('/logout', (req, res) => {
+  console.log("============== Lougout Route ==============")
   if (req.session.loggedIn) {
       req.session.destroy(() => {
           res.status(204).end();

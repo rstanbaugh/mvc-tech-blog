@@ -1,8 +1,6 @@
-<!-- Jumbotron -->
-{{!-- {{> jumbotron}} --}}
-<!-- Jumbotron -->
+
 <div class="login">
-  <form class="login-form">
+  <form id='login-form' class="login-form">
     <div class="login">
       <h4 class="">Sign In</h4>
       <label for="email-login">Email</label>
@@ -11,23 +9,14 @@
 
       <label for="password-login">Password</label>
       <input type="password" class="form-text password-login" id="password-login">
-      <button type="submit" class="login-form-button">Sign In</button>
+      <div>
+        <a href="javascript:{}" id="login-button" onclick="loginFormHandler()" class="login-form-button m-2">Log In</a>
+        <a href="/signup" class="login-form-button m-2">Sign Up!</a>          
+      </div>
     </div>
+    
   </form>
 
-  <form class="signup-form">
-    <h4 class="">Sign Up!</h4>
-
-    <label for="username-signup">Username</label>
-    <input type="text" class="form-text username-signup" id="username-signup">
-
-    <label for="password-login">Email</label>
-    <input type="email" class="form-text email-signup" id="email-signup">
-
-    <label for="password-signup">Password</label>
-    <input type="password" class="form-text password-signup" id="password-signup">
-
-    <button type="submit" class="signup-form-button">Sign Up!</button>
-  </form>
+  
 </div>
 <script src="/javascript/login.js"></script>
