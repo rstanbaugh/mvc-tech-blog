@@ -7,7 +7,7 @@
     <form class="edit-post-form">
       <div class="form-elements">
         <label for="post-title" style="padding-top: .15em">title</label>
-        <input type="text" id="post-title" name="post-title" class="form-title" value={{post.title}}/>
+        <input type="text" id="post-title" name="post-title" class="form-title" value="{{post.title}}">
       </div>
       <div class="form-elements">
         <label for="post-content">content</label>
@@ -20,7 +20,7 @@
       </div>
       <div>
         <button type="submit" class="edit-post-btn">save post</button>
-        <button type="button" class="edit-post-btn">delete post</button>
+        <button type="button" class="delete-post-btn edit-post-btn">delete post</button>
         {{!-- <a href="javascript:{}" id="login-button" onclick="deleteFormHandler()" class="login-form-button m-2">delete post</a> --}}
       </div>
     </form>
