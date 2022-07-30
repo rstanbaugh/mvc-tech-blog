@@ -1,12 +1,14 @@
 
 
 {{#if posts.length}}
+{{posts.post_content}}
 <section>
-  <h2>Your Posts</h2>
-  <ol>
+  <h2 style="margin-bottom: .15em;">Your Posts</h2>
+  <ol class="post-list">
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
+    <li class="card">
+      {{!-- {{> post-info post}} --}}
+      {{> my-post-info post}}
       {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
     </li>
     {{/each}}
